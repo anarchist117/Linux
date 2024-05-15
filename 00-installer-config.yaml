@@ -1,0 +1,16 @@
+# This is the network config written by 'subiquity'
+network:
+  ethernets:
+    ens33:
+      addresses:
+      - 10.1.101.111/24
+      nameservers:
+        addresses:
+        - 10.1.100.1
+        - 10.1.100.2
+        search:
+        - domain.com
+      routes:
+      - to: default
+        via: 10.1.101.254
+  version: 2
