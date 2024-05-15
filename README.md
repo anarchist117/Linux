@@ -17,4 +17,7 @@ rm /swap.img
 ```
 ```bash
 free -h
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       200Mi       1.4Gi       1.0Mi       281Mi       1.6Gi
+Swap:             0B          0B          0B
 ```
