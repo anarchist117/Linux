@@ -33,11 +33,8 @@ sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 ```
 
-3. Add the appropriate Kubernetes `apt` repository. Please note that this repository have packages
-   only for Kubernetes {{< skew currentVersion >}}; for other Kubernetes minor versions, you need to
-   change the Kubernetes minor version in the URL to match your desired minor version
-   (you should also check that you are reading the documentation for the version of Kubernetes
-   that you plan to install).
+3. Add the appropriate Kubernetes `apt` repository.
+   Please note that this repository have packages only for Kubernetes 1.30
 
 ```shell
 # This overwrites any existing configuration in /etc/apt/sources.list.d/kubernetes.list
