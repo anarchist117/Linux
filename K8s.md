@@ -30,7 +30,7 @@ sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 ```shell
 # If the directory `/etc/apt/keyrings` does not exist, it should be created before the curl command, read the note below.
 # sudo mkdir -p -m 755 /etc/apt/keyrings
-curl -fsSL https://pkgs.k8s.io/core:/stable:/{{< param "version" >}}/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 ```
 
 3. Add the appropriate Kubernetes `apt` repository. Please note that this repository have packages
