@@ -10,5 +10,9 @@ uname -mov
 ```bash
 nano /etc/fstab
 # /swap.img     none    swap    sw      0       0
+
 swapoff -a
+```
+```bash
+free -h
 ```
