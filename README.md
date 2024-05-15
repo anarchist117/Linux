@@ -2,7 +2,10 @@
 ### Architecture
 ```bash
 uname -mov
+
 #117-Ubuntu SMP Fri Apr 26 12:26:49 UTC 2024 x86_64 GNU/Linux
+
+#1 SMP PREEMPT Debian 1:6.6.20-1+rpt1 (2024-03-07) aarch64 GNU/Linux
 ```
 ### swap
 ```bash
@@ -17,6 +20,7 @@ rm /swap.img
 ```
 ```bash
 free -h
+
                total        used        free      shared  buff/cache   available
 Mem:           1.9Gi       200Mi       1.4Gi       1.0Mi       281Mi       1.6Gi
 Swap:             0B          0B          0B
