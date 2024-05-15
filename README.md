@@ -14,5 +14,8 @@ nano /etc/fstab
 swapoff -a
 ```
 ```bash
+rm /swap.img
+```
+```bash
 free -h
 ```
