@@ -18,7 +18,7 @@ sysctl net.ipv4.ip_forward
 # Installing kubeadm, kubelet and kubectl
 1. Update the `apt` package index and install packages needed to use the Kubernetes `apt` repository:
 
-   ```shell
+   ```bash
    sudo apt-get update
    # apt-transport-https may be a dummy package; if so, you can skip that package
    sudo apt-get install -y apt-transport-https ca-certificates curl gpg
@@ -32,10 +32,6 @@ sysctl net.ipv4.ip_forward
    # sudo mkdir -p -m 755 /etc/apt/keyrings
    curl -fsSL https://pkgs.k8s.io/core:/stable:/{{< param "version" >}}/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
    ```
-
-{{< note >}}
-In releases older than Debian 12 and Ubuntu 22.04, directory `/etc/apt/keyrings` does not exist by default, and it should be created before the curl command.
-{{< /note >}}
 
 3. Add the appropriate Kubernetes `apt` repository. Please note that this repository have packages
    only for Kubernetes {{< skew currentVersion >}}; for other Kubernetes minor versions, you need to
