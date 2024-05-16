@@ -74,6 +74,6 @@ sudo systemctl enable --now kubelet
    ```
 2. Install the containerd packages.
    To install the latest version, run:
-   ```console
+   ```bash
    sudo apt-get install containerd.io
    ```
