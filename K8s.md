@@ -79,7 +79,8 @@ sudo apt-get update
 sudo apt-get install containerd.io
 ```
 
-3. Remove default config file 
+3. Remove default config file and restart service containerd
 ```bash
 rm /etc/containerd/config.toml
+systemctl restart containerd.service
 ```
