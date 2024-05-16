@@ -73,8 +73,7 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 ```
-2. Install the containerd packages.
-   To install the latest version, run:
+2. Install the containerd packages:
    
 ```bash
 sudo apt-get install containerd.io
