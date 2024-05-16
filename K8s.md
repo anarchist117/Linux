@@ -78,3 +78,8 @@ sudo apt-get update
 ```bash
 sudo apt-get install containerd.io
 ```
+
+3. Remove default config file 
+```bash
+rm /etc/containerd/config.toml
+```
