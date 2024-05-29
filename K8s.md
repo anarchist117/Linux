@@ -107,7 +107,7 @@ To use the `systemd` cgroup driver in `/etc/containerd/config.toml` with `runc`,
 If you apply this change, make sure to restart containerd:
 
 ```shell
-sudo systemctl restart containerd
+systemctl restart containerd
 ```
 
 # Installing kubeadm, kubelet and kubectl
