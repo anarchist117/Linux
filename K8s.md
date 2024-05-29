@@ -67,7 +67,9 @@ https://raw.githubusercontent.com/containerd/containerd/main/containerd.service 
 and run the following commands:
 
 ```bash
-cd /usr/local/lib/systemd/system/
+mkdir /usr/local/lib/systemd
+mkdir /usr/local/lib/systemd/system
+cd /usr/local/lib/systemd/system
 wget https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
 systemctl daemon-reload
 systemctl enable --now containerd
