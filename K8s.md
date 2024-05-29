@@ -18,9 +18,7 @@ rm /swap.img
 
 
 # Installing a container runtime
-
-
-# Enable IPv4 packet forwarding
+### Enable IPv4 packet forwarding
 To manually enable IPv4 packet forwarding:
 ```shell
 # sysctl params required by setup, params persist across reboots
@@ -35,7 +33,6 @@ Verify that `net.ipv4.ip_forward` is set to 1 with:
 ```shell
 sysctl net.ipv4.ip_forward
 ```
-
 
 # Container runtimes
 #### Step 1: Installing containerd
