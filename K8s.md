@@ -15,6 +15,18 @@ sysctl net.ipv4.ip_forward
 ```
 
 
+# Container runtimes
+#### Step 1: Installing containerd
+
+Download the `containerd-<VERSION>-<OS>-<ARCH>.tar.gz` archive from https://github.com/containerd/containerd/releases ,
+verify its sha256sum, and extract it under `/usr/local`:
+
+```console
+wget https://github.com/containerd/containerd/releases/download/v1.7.17/containerd-1.7.17-linux-amd64.tar.gz
+tar Cxzvf /usr/local containerd-1.7.17-linux-amd64.tar.gz
+```
+
+
 # Installing kubeadm, kubelet and kubectl
 1. Update the `apt` package index and install packages needed to use the Kubernetes `apt` repository:
 
