@@ -1,4 +1,4 @@
-# Disabe Swap
+# Disable swap
 ```bash
 nano /etc/fstab
 # /swap.img     none    swap    sw      0       0
