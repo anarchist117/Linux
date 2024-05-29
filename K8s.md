@@ -1,3 +1,15 @@
+# Disabe Swap
+```bash
+nano /etc/fstab
+# /swap.img     none    swap    sw      0       0
+```
+```bash
+swapoff -a
+rm /swap.img
+```
+
+
+
 # Enable IPv4 packet forwarding
 To manually enable IPv4 packet forwarding:
 ```shell
