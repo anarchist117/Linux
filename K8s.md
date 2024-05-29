@@ -91,7 +91,7 @@ containerd config default > /etc/containerd/config.toml
 ```
 The default configuration can be generated.
 
-#### Configuring the `systemd` cgroup driver
+#### Configuring the `systemd` cgroup driver and Overriding the sandbox (pause) image
 
 To use the `systemd` cgroup driver in `/etc/containerd/config.toml` with `runc`, set
 
@@ -100,6 +100,9 @@ To use the `systemd` cgroup driver in `/etc/containerd/config.toml` with `runc`,
   ...
   [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
     SystemdCgroup = true
+
+[plugins."io.containerd.grpc.v1.cri"]
+  sandbox_image = "registry.k8s.io/pause:3.9"
 ```
 
 If you apply this change, make sure to restart containerd:
@@ -108,16 +111,7 @@ If you apply this change, make sure to restart containerd:
 systemctl restart containerd
 ```
 
-#### Overriding the sandbox (pause) image
 
-In your [containerd config](https://github.com/containerd/containerd/blob/main/docs/cri/config.md) you can overwrite the
-sandbox image by setting the following config:
-
-```toml
-[plugins."io.containerd.grpc.v1.cri"]
-  sandbox_image = "registry.k8s.io/pause:3.9"
-```
-You might need to restart `containerd` as well once you've updated the config file: `systemctl restart containerd`.
 
 # 3. Installing kubeadm, kubelet and kubectl
 1. Update the `apt` package index and install packages needed to use the Kubernetes `apt` repository:
