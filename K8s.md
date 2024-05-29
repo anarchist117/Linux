@@ -38,6 +38,19 @@ install -m 755 runc.amd64 /usr/local/sbin/runc
 
 The binary is built statically and should work on any Linux distribution.
 
+#### Step 3: Installing CNI plugins
+
+Download the `cni-plugins-<OS>-<ARCH>-<VERSION>.tgz` archive from https://github.com/containernetworking/plugins/releases ,
+verify its sha256sum, and extract it under `/opt/cni/bin`:
+
+```console
+mkdir -p /opt/cni/bin
+wget https://github.com/containernetworking/plugins/releases/download/v1.5.0/cni-plugins-linux-amd64-v1.5.0.tgz
+tar Cxzvf /opt/cni/bin cni-plugins-linux-amd64-v1.5.0.tgz
+```
+
+The binaries are built statically and should work on any Linux distribution.
+
 # Installing kubeadm, kubelet and kubectl
 1. Update the `apt` package index and install packages needed to use the Kubernetes `apt` repository:
 
