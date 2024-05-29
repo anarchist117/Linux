@@ -1,4 +1,4 @@
-# Before you begin
+# 1. Before you begin
 ### System requirement
 ```bash
 2 GB or more of RAM per machine (any less will leave little room for your apps).
@@ -17,7 +17,7 @@ rm /swap.img
 
 
 
-# Installing a container runtime
+# 2. Installing a container runtime
 ### Enable IPv4 packet forwarding
 To manually enable IPv4 packet forwarding:
 ```shell
@@ -119,7 +119,7 @@ sandbox image by setting the following config:
 ```
 You might need to restart `containerd` as well once you've updated the config file: `systemctl restart containerd`.
 
-# Installing kubeadm, kubelet and kubectl
+# 3. Installing kubeadm, kubelet and kubectl
 1. Update the `apt` package index and install packages needed to use the Kubernetes `apt` repository:
 
 ```shell
