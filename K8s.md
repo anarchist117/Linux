@@ -32,6 +32,7 @@ Download the `runc.<ARCH>` binary from https://github.com/opencontainers/runc/re
 verify its sha256sum, and install it as `/usr/local/sbin/runc`.
 
 ```console
+wget https://github.com/opencontainers/runc/releases/download/v1.1.12/runc.amd64
 install -m 755 runc.amd64 /usr/local/sbin/runc
 ```
 
