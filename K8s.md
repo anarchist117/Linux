@@ -61,6 +61,23 @@ containerd config default > /etc/containerd/config.toml
 ```
 The default configuration can be generated.
 
+#### Configuring the `systemd` cgroup driver {#containerd-systemd}
+
+To use the `systemd` cgroup driver in `/etc/containerd/config.toml` with `runc`, set
+
+```
+[plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
+  ...
+  [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
+    SystemdCgroup = true
+```
+
+If you apply this change, make sure to restart containerd:
+
+```shell
+sudo systemctl restart containerd
+```
+
 # Installing kubeadm, kubelet and kubectl
 1. Update the `apt` package index and install packages needed to use the Kubernetes `apt` repository:
 
