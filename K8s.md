@@ -61,7 +61,7 @@ containerd config default > /etc/containerd/config.toml
 ```
 The default configuration can be generated.
 
-#### Configuring the `systemd` cgroup driver {#containerd-systemd}
+#### Configuring the `systemd` cgroup driver
 
 To use the `systemd` cgroup driver in `/etc/containerd/config.toml` with `runc`, set
 
