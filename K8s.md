@@ -51,6 +51,13 @@ tar Cxzvf /opt/cni/bin cni-plugins-linux-amd64-v1.5.0.tgz
 
 The binaries are built statically and should work on any Linux distribution.
 
+## Customizing containerd
+
+containerd uses a configuration file located in `/etc/containerd/config.toml` for specifying daemon level options.
+A sample configuration file can be found [here](/docs/man/containerd-config.toml.5.md).
+
+The default configuration can be generated via `containerd config default > /etc/containerd/config.toml`.
+
 # Installing kubeadm, kubelet and kubectl
 1. Update the `apt` package index and install packages needed to use the Kubernetes `apt` repository:
 
