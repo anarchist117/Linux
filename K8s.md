@@ -26,6 +26,17 @@ wget https://github.com/containerd/containerd/releases/download/v1.7.17/containe
 tar Cxzvf /usr/local containerd-1.7.17-linux-amd64.tar.gz
 ```
 
+##### systemd
+If you intend to start containerd via systemd, you should also download the `containerd.service` unit file from
+https://raw.githubusercontent.com/containerd/containerd/main/containerd.service into `/usr/local/lib/systemd/system/containerd.service`,
+and run the following commands:
+
+```bash
+cd /usr/local/lib/systemd/system/
+wget https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
+systemctl daemon-reload
+systemctl enable --now containerd
+```
 
 # Installing kubeadm, kubelet and kubectl
 1. Update the `apt` package index and install packages needed to use the Kubernetes `apt` repository:
