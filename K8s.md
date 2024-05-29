@@ -1,4 +1,9 @@
-# Disable swap
+# Before you begin
+### System requirement
+2 GB or more of RAM per machine (any less will leave little room for your apps).
+2 CPUs or more.
+
+### Disable swap
 ```bash
 nano /etc/fstab
 # /swap.img     none    swap    sw      0       0
