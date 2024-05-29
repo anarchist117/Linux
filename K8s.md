@@ -61,6 +61,18 @@ containerd config default > /etc/containerd/config.toml
 ```
 The default configuration can be generated.
 
+##### systemd
+If you intend to start containerd via systemd, you should also download the `containerd.service` unit file from
+https://raw.githubusercontent.com/containerd/containerd/main/containerd.service into `/usr/local/lib/systemd/system/containerd.service`,
+and run the following commands:
+
+```bash
+cd /usr/local/lib/systemd/system/
+wget https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
+systemctl daemon-reload
+systemctl enable --now containerd
+```
+
 #### Configuring the `systemd` cgroup driver
 
 To use the `systemd` cgroup driver in `/etc/containerd/config.toml` with `runc`, set
