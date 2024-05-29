@@ -44,6 +44,20 @@ wget https://github.com/containerd/containerd/releases/download/v1.7.17/containe
 tar Cxzvf /usr/local containerd-1.7.17-linux-amd64.tar.gz
 ```
 
+##### systemd
+If you intend to start containerd via systemd, you should also download the `containerd.service` unit file from
+https://raw.githubusercontent.com/containerd/containerd/main/containerd.service into `/usr/local/lib/systemd/system/containerd.service`,
+and run the following commands:
+
+```bash
+mkdir /usr/local/lib/systemd
+mkdir /usr/local/lib/systemd/system
+cd /usr/local/lib/systemd/system
+wget https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
+systemctl daemon-reload
+systemctl enable --now containerd
+```
+
 #### Step 2: Installing runc
 
 Download the `runc.<ARCH>` binary from https://github.com/opencontainers/runc/releases ,
@@ -79,19 +93,7 @@ containerd config default > /etc/containerd/config.toml
 ```
 The default configuration can be generated.
 
-##### systemd
-If you intend to start containerd via systemd, you should also download the `containerd.service` unit file from
-https://raw.githubusercontent.com/containerd/containerd/main/containerd.service into `/usr/local/lib/systemd/system/containerd.service`,
-and run the following commands:
 
-```bash
-mkdir /usr/local/lib/systemd
-mkdir /usr/local/lib/systemd/system
-cd /usr/local/lib/systemd/system
-wget https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
-systemctl daemon-reload
-systemctl enable --now containerd
-```
 
 #### Configuring the `systemd` cgroup driver
 
