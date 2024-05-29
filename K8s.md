@@ -50,10 +50,8 @@ https://raw.githubusercontent.com/containerd/containerd/main/containerd.service 
 and run the following commands:
 
 ```bash
-mkdir /usr/local/lib/systemd
-mkdir /usr/local/lib/systemd/system
-cd /usr/local/lib/systemd/system
-wget https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
+mkdir -p /usr/local/lib/systemd/system
+wget https://raw.githubusercontent.com/containerd/containerd/main/containerd.service -O /usr/local/lib/systemd/system
 systemctl daemon-reload
 systemctl enable --now containerd
 ```
