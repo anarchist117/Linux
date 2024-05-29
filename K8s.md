@@ -1,7 +1,9 @@
 # Before you begin
 ### System requirement
+```bash
 2 GB or more of RAM per machine (any less will leave little room for your apps).
 2 CPUs or more.
+```
 
 ### Disable swap
 ```bash
