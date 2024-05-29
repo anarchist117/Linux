@@ -34,7 +34,6 @@ Verify that `net.ipv4.ip_forward` is set to 1 with:
 sysctl net.ipv4.ip_forward
 ```
 
-# Container runtimes
 #### Step 1: Installing containerd
 
 Download the `containerd-<VERSION>-<OS>-<ARCH>.tar.gz` archive from https://github.com/containerd/containerd/releases ,
