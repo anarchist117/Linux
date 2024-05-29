@@ -26,7 +26,16 @@ wget https://github.com/containerd/containerd/releases/download/v1.7.17/containe
 tar Cxzvf /usr/local containerd-1.7.17-linux-amd64.tar.gz
 ```
 
+#### Step 2: Installing runc
 
+Download the `runc.<ARCH>` binary from https://github.com/opencontainers/runc/releases ,
+verify its sha256sum, and install it as `/usr/local/sbin/runc`.
+
+```console
+install -m 755 runc.amd64 /usr/local/sbin/runc
+```
+
+The binary is built statically and should work on any Linux distribution.
 
 # Installing kubeadm, kubelet and kubectl
 1. Update the `apt` package index and install packages needed to use the Kubernetes `apt` repository:
