@@ -1,6 +1,7 @@
 # Docker mirrors
-/etc/docker/daemon.json
-
+```bash
+nano /etc/docker/daemon.json
+```
 ```bash
 {
   "registry-mirrors" : [
@@ -11,5 +12,6 @@
   ]
 }
 ```
-
+```bash
 systemctl restart docker
+```
