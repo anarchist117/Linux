@@ -26,3 +26,11 @@ mkdir /mnt/data
 nano /etc/fstab
 /dev/sdb1 /mnt/data ext4 defaults 0 2
 ```
+
+
+
+# Extend Partition
+### Rescan sdb disk
+```bash
+echo 1 > /sys/block/sdb/device/rescan
+```
