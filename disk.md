@@ -30,9 +30,12 @@ nano /etc/fstab
 
 
 # Extend Partition
-### Rescan sdb disk
 ```bash
 echo 1 > /sys/block/sdb/device/rescan
+```
+```bash
+fdisk /etc/sdb
+w         # Write table to disk and exit
 ```
 ```bash
 resize2fs /dev/sda1
