@@ -34,3 +34,6 @@ nano /etc/fstab
 ```bash
 echo 1 > /sys/block/sdb/device/rescan
 ```
+```bash
+resize2fs /dev/sda1
+```
