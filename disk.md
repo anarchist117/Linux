@@ -1,4 +1,4 @@
-### Installing A New Hard Drive
+### Installing a new Hard Drive
 ```bash
 fdisk -l
 ```
@@ -10,4 +10,11 @@ default   # Partition number
 default   # First sector
 default   # Last sector
 w         # Write table to disk and exit
+```
+
+
+
+### Format the new Partition
+```bash
+mkfs -t ext4 /dev/sdb1
 ```
