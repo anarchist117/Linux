@@ -12,9 +12,16 @@ default   # Last sector
 w         # Write table to disk and exit
 ```
 
-
-
 ### Format the new Partition
 ```bash
 mkfs.ext4 /dev/sdb1
+```
+
+### Mount Point
+```bash
+mkdir /mnt/data
+```
+```bash
+nano /etc/fstab
+/dev/sdb1 /mnt/data ext4 defaults 0 2
 ```
