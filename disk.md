@@ -2,7 +2,7 @@
 ```bash
 fdisk -l
 ```
-### Create Partition
+### 1. Create Partition
 ```bash
 fdisk /dev/sdb
 g         # create a new empty GPT partition table
@@ -13,12 +13,12 @@ default   # Last sector
 w         # Write table to disk and exit
 ```
 
-### Format Partition
+### 2. Format Partition
 ```bash
 mkfs.ext4 /dev/sdb1
 ```
 
-### Mount Point
+### 3. Mount Point
 ```bash
 mkdir /mnt/data
 ```
@@ -33,15 +33,15 @@ nano /etc/fstab
 ```
 df -Th
 ```
-### Rescan sdb disk
+### 1. Rescan sdb disk
 ```bash
 echo 1 > /sys/block/sdb/device/rescan
 ```
-### Extending Partition
+### 2. Extending Partition
 ```bash
 growpart /dev/sdb 1
 ```
-### Resizing File System
+### 3. Resizing File System
 ```bash
 resize2fs /dev/sdb1
 ```
