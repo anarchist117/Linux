@@ -2,8 +2,6 @@
 ```bash
 fdisk -l
 
-
-
 Disk /dev/sda: 25 GiB, 26843545600 bytes, 52428800 sectors
 Disk model: Virtual disk
 Units: sectors of 1 * 512 = 512 bytes
