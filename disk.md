@@ -34,8 +34,5 @@ nano /etc/fstab
 echo 1 > /sys/block/sdb/device/rescan
 ```
 ```bash
-lvextend -l +100%FREE /dev/sdb1
-```
-```bash
-resize2fs /dev/sdb1
+growpart /dev/sdb 1
 ```
