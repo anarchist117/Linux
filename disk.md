@@ -1,4 +1,5 @@
-### Installing a new Hard Drive
+# Installing a new Hard Drive
+### Create Partition
 ```bash
 fdisk -l
 ```
@@ -12,7 +13,7 @@ default   # Last sector
 w         # Write table to disk and exit
 ```
 
-### Format the new Partition
+### Format Partition
 ```bash
 mkfs.ext4 /dev/sdb1
 ```
