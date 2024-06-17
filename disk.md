@@ -34,9 +34,5 @@ nano /etc/fstab
 echo 1 > /sys/block/sdb/device/rescan
 ```
 ```bash
-fdisk /etc/sdb
-w         # Write table to disk and exit
-```
-```bash
-resize2fs /dev/sda1
+resize2fs /dev/sdb1
 ```
