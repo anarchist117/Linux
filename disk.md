@@ -1,8 +1,8 @@
 # Installing a new Hard Drive
-### Create Partition
 ```bash
 fdisk -l
 ```
+### Create Partition
 ```bash
 fdisk /dev/sdb
 g         # create a new empty GPT partition table
@@ -33,12 +33,15 @@ nano /etc/fstab
 ```
 df -Th
 ```
+### Rescan sdb disk
 ```bash
 echo 1 > /sys/block/sdb/device/rescan
 ```
+### Extending Partition
 ```bash
 growpart /dev/sdb 1
 ```
+### Resizing File System
 ```bash
 resize2fs /dev/sdb1
 ```
