@@ -36,3 +36,6 @@ echo 1 > /sys/block/sdb/device/rescan
 ```bash
 growpart /dev/sdb 1
 ```
+```bash
+resize2fs /dev/sdb1
+```
