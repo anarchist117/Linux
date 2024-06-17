@@ -30,6 +30,9 @@ nano /etc/fstab
 
 
 # Extend Partition
+```
+df -Th
+```
 ```bash
 echo 1 > /sys/block/sdb/device/rescan
 ```
