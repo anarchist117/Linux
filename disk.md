@@ -33,7 +33,7 @@ nano /etc/fstab
 ```
 df -Th
 ```
-### 1. Rescan sdb disk
+### 1. Rescan Disk
 ```bash
 echo 1 > /sys/block/sdb/device/rescan
 ```
