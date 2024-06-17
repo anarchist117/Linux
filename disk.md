@@ -16,5 +16,5 @@ w         # Write table to disk and exit
 
 ### Format the new Partition
 ```bash
-mkfs -t ext4 /dev/sdb1
+mkfs.ext4 /dev/sdb1
 ```
