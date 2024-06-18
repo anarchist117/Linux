@@ -40,8 +40,15 @@ echo 1 > /sys/block/sdb/device/rescan
 ### 2. Extending Partition
 ```bash
 growpart /dev/sdb 1
-```
 ### 3. Resizing File System
 ```bash
 resize2fs /dev/sdb1
+```
+
+
+
+
+# Convert MBR to GPT
+```
+gdisk /dev/sdb
 ```
