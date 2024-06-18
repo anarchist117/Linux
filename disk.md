@@ -55,5 +55,5 @@ resize2fs /dev/sdb1
 ```
 gdisk /dev/sdb
 w         # Write data
-y         # Do you want to proceed? (Y/N)
+y         # Do you want to proceed?
 ```
