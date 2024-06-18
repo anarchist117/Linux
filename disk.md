@@ -49,6 +49,7 @@ resize2fs /dev/sdb1
 
 
 # Convert MBR to GPT
+### Add unallocated disk space before convert
 ```
 gdisk /dev/sdb
 ```
