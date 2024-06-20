@@ -40,16 +40,16 @@ echo 1 > /sys/block/sdb/device/rescan
 ### 2. Extending Partition
 ```bash
 growpart /dev/sdb 1
-or
-growpart /dev/sda 3
 
 # For system partition
+growpart /dev/sda 3
 lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
 ```
 ### 3. Resizing File System
 ```bash
 resize2fs /dev/sdb1
-or
+
+# For system partition
 resize2fs/dev/ubuntu-vg/ubuntu-lv
 ```
 
