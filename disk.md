@@ -1,7 +1,5 @@
 # Installing a new Hard Drive
-![disk-volume]
-(https://github.com/anarchist117/linux/blob/main/disk-volume.jpg)
-
+![disk-volume](https://github.com/anarchist117/linux/blob/main/disk-volume.jpg)
 ```bash
 fdisk -l
 ```
