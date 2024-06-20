@@ -24,7 +24,7 @@ mkdir /mnt/data
 ```
 ```bash
 nano /etc/fstab
-/dev/sdb1 /mnt/data ext4 defaults 0 2
+/dev/sdb1  /mnt/data  ext4  defaults  0 2
 ```
 
 
