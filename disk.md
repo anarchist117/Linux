@@ -36,6 +36,9 @@ df -Th
 ### 1. Rescan Disk
 ```bash
 echo 1 > /sys/block/sdb/device/rescan
+
+# For system partition
+echo 1 > /sys/block/sda/device/rescan
 ```
 ### 2. Extending Partition
 ```bash
