@@ -1,5 +1,6 @@
-# Installing a new Hard Drive
 ![disk-volume](https://github.com/anarchist117/linux/blob/main/disk-volume.jpg)
+
+# Installing a new Hard Drive
 ```bash
 fdisk -l
 ```
@@ -56,7 +57,6 @@ resize2fs /dev/sdb1
 # For system partition
 resize2fs /dev/ubuntu-vg/ubuntu-lv
 ```
-
 
 
 
