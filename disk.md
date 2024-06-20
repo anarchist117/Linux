@@ -1,5 +1,3 @@
-![disk-volume](https://github.com/anarchist117/linux/blob/main/disk-volume.jpg)
-
 # Installing a new Hard Drive
 ```bash
 fdisk -l
@@ -68,3 +66,7 @@ gdisk /dev/sdb
 w         # Write data
 y         # Do you want to proceed?
 ```
+
+
+
+![disk-volume](https://github.com/anarchist117/linux/blob/main/disk-volume.jpg)
