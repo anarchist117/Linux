@@ -13,6 +13,8 @@ chmod 777 /mnt/data
 ```
 nano /etc/exports
 /mnt/data *(rw,sync,no_subtree_check)
+# /mnt/share_1 192.168.0.0/24(rw,sync,no_subtree_check)
+# /mnt/share_2 client2(ro,sync,no_subtree_check)
 ```
 ### Apply exports config
 ```
