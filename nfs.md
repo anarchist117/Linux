@@ -43,7 +43,7 @@ nfs.server.com:/mnt/data        /mnt/nfs    nfs     default    0 0
 
 # Windows NFS Client
 ```powershell
-Install-WindowsFeature NFS-Client
+Enable-WindowsOptionalFeature -FeatureName ServicesForNFS-ClientOnly, ClientForNFS-Infrastructure -Online -NoRestart
 ```
 ```cmd
 mount -o anon nfs.server.com:/mnt/data Z:
