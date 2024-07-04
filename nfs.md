@@ -1,5 +1,4 @@
 # NFS Server
-
 ### Install the NFS Server
 ```
 apt install nfs-kernel-server
@@ -22,3 +21,19 @@ nano /etc/exports
 ```
 exportfs -a
 ```
+
+
+
+# NFS Client
+### Enable NFS support
+```
+apt install nfs-common
+```
+
+### Create mount point
+```
+mkdir /mnt/nfs
+```
+
+### Mount NFS Share
+mount nfs.server.com:/mnt/data /mnt/nfs
