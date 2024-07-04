@@ -13,9 +13,9 @@ chmod 777 /mnt/data
 ```
 nano /etc/exports
 
-/mnt/data *(rw,sync,no_subtree_check)
+/mnt/data *(rw,sync,no_subtree_check,no_root_squash)
 # /mnt/share_1 192.168.0.0/24(rw,sync,no_subtree_check)
-# /mnt/share_2 client2(ro,sync,no_subtree_check)
+# /mnt/share_2 client_ip(ro,sync,no_subtree_check)
 ```
 ### Apply exports config
 ```
@@ -34,4 +34,17 @@ mkdir /mnt/nfs
 ### Mount NFS Share
 ```
 mount nfs.server.com:/mnt/data /mnt/nfs
+```
+```
+nano /etc/fstab
+
+nfs.server.com:/mnt/data        /mnt/nfs    nfs     default    0 0
+```
+
+# Windows NFS Client
+```powershell
+Install-WindowsFeature NFS-Client
+```
+```cmd
+mount -o anon nfs.server.com:/mnt/data Z:
 ```
