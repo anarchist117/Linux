@@ -1,9 +1,10 @@
 # NFS Server
 
+### Install the NFS Server
 ```
-# install the NFS Server
 apt install nfs-kernel-server
-
+```
+```
 # Create share folder
 mkdir /mnt/data
 chown nobody:nogroup /mnt/data
