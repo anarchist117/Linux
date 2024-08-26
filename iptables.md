@@ -1,4 +1,4 @@
-№ iptables list
+# iptables list
 ```
 iptaables -L
 ```
