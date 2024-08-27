@@ -8,3 +8,7 @@ PubkeyAuthentication yes
 ```
 service ssh restart
 ```
+# Copy ID_RSA.pub
+```
+ssh-copy-id root@server
+```
