@@ -5,3 +5,6 @@
 PasswordAuthentication no
 PubkeyAuthentication yes
 ```
+```
+service ssh restart
+```
