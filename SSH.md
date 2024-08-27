@@ -1,6 +1,6 @@
 # SSH Config
 ```
-# /etc/ssh/sshd_config
+#nano /etc/ssh/sshd_config
 
 PasswordAuthentication no
 PubkeyAuthentication yes
