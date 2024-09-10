@@ -12,3 +12,7 @@ service ssh restart
 ```
 ssh-copy-id root@server
 ```
+# Check key type
+```
+ssh-keygen -lf .ssh/id_rsa
+```
