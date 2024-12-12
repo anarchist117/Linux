@@ -2,14 +2,14 @@ network:
   ethernets:
     ens33:
       addresses:
-      - 10.1.101.111/24
+      - 10.11.12.123/24
       nameservers:
         addresses:
-        - 10.1.100.1
-        - 10.1.100.2
+        - 10.11.12.1
+        - 10.11.12.2
         search:
         - domain.com
       routes:
       - to: default
-        via: 10.1.101.254
+        via: 10.11.12.254
   version: 2
