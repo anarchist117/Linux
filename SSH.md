@@ -1,5 +1,5 @@
 # SSH Key
-## Generate Certificate
+### Generate Certificate
 ```
 ssh-keygen -t ed25519
 
@@ -7,13 +7,18 @@ ssh-keygen -t ed25519
 ssh-keygen -t rsa -b 4096
 ```
 
-## Copy public key
+### Copy public key
 ```
 # Linux
 ssh-copy-id root@server
 
 # Windows
 cat .ssh/id_rsa.pub >> /user/.ssh/authorized_keys
+```
+
+### Check key type
+```
+ssh-keygen -lf .ssh/id_rsa
 ```
 
 # SSH Config
@@ -25,11 +30,6 @@ PubkeyAuthentication yes
 ```
 ```
 service ssh restart
-```
-
-## Check key type
-```
-ssh-keygen -lf .ssh/id_rsa
 ```
 
 # SSH Tunnel
