@@ -1,11 +1,15 @@
-# Chainloading iPXE
-### Pre-built binaries
+# Pre-built binaries
+```
 https://boot.ipxe.org/ipxe.iso
-### UEFI
-http://boot.ipxe.org/ipxe.efi
-### Legacy BIOS
-http://boot.ipxe.org/undionly.kpxe
+```
 
+# Chainloading iPXE
+```
+# UEFI
+http://boot.ipxe.org/ipxe.efi
+# Legacy BIOS
+http://boot.ipxe.org/undionly.kpxe
+```
 
 
 # Documentation
