@@ -11,6 +11,8 @@ PCI device ID is 165f
 
 # 2. Building the ROM image
 ```
+apt install -y gcc binutils make perl syslinux liblzma-dev
+
 git clone https://github.com/ipxe/ipxe.git
 cd ipxe/src/
 
