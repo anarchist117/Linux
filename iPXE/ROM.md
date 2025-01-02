@@ -8,3 +8,12 @@ lspci -nn
 PCI vendor ID is 14e4
 PCI device ID is 165f
 ```
+
+# 2. Building the ROM image
+```
+git clone https://github.com/ipxe/ipxe.git
+cd ipxe/src/
+
+# PCI vendor ID + PCI device ID.rom
+make bin/14e4165f.rom
+```
