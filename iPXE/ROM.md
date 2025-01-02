@@ -36,3 +36,5 @@ B57udiag.exe -c 0 -pxe 14e4165f.rom
 
 # Documentation
 https://ipxe.org/howto/romburning/tg3
+
+https://www.broadcom.com/support/download-search?dk=&pa=&pf=Legacy+Ethernet+Controllers
