@@ -31,3 +31,6 @@ cd B57udiag
 B57udiag.exe -ver
 B57udiag.exe -c 0 -pxe 14e4165f.rom
 ```
+
+# Documentation
+https://ipxe.org/howto/romburning/tg3
