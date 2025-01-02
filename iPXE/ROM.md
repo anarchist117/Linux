@@ -21,8 +21,10 @@ make bin/14e4165f.rom
 ```
 
 # 3. Burning the iPXE ROM
-### Download B57udiag (B57udiag-17.2.03.zip or B57udiag-15.6.1.iso)
-[NetLink®/NetXtreme® I Desktop/Mobile/Server Diagnostic](https://www.broadcom.com/support/download-search?dk=&pa=&pf=Legacy+Ethernet+Controllers&pg=Legacy+Products&pn=BCM57780&po=)
+### Download B57udiag
+[B57udiag-17.2.03.zip](https://docs.broadcom.com/docs/12358346)
+or
+[B57udiag-15.6.1.iso](https://docs.broadcom.com/docs/12358473)
 
 ### Start MS-DOS
 ```
