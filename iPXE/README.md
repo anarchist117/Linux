@@ -1,14 +1,9 @@
-# Pre-built binaries (Bootable ISO image)
-https://boot.ipxe.org/ipxe.iso
-
-# Chainloading iPXE (TFTP)
-| Type  | Download |
-| ------------- | ------------- |
-| UEFI  | http://boot.ipxe.org/ipxe.efi |
-| Legacy BIOS  | http://boot.ipxe.org/undionly.kpxe |
-
-# Burning iPXE into ROM (Replacement for the card's legacy PXE ROM)
-https://ipxe.org/howto/romburning
+| Left-aligned | First Header  | Second Header |
+| --- | --- | --- |
+| Bootable ISO image | Pre-built binaries | https://boot.ipxe.org/ipxe.iso |
+| TFTP | Chainloading iPXE | UEFI  | http://boot.ipxe.org/ipxe.efi |
+| TFTP | Chainloading iPXE | Legacy BIOS  | http://boot.ipxe.org/undionly.kpxe |
+| Replacement PXE ROM | Burning iPXE into ROM | https://ipxe.org/howto/romburning |
 
 # Documentation
 https://ipxe.org/
