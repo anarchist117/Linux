@@ -1,6 +1,5 @@
 # iPXE
 ## 1. Select Boot Type
-
 | Boot Type | Description | Download |
 | --- | --- | --- |
 | ISO image | Pre-built binaries | https://boot.ipxe.org/ipxe.iso |
