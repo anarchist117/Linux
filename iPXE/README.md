@@ -14,7 +14,8 @@
 or
 ```
 Boot iPXE
-Ctrl-B
+Press Ctrl-B
+
 dhcp
 chain http://boot.ipxe.org/demo/boot.php
 ```
