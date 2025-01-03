@@ -8,7 +8,9 @@
 
 ## 2. Configure DHCP Server
 [Microsoft DHCP server](https://ipxe.org/howto/msdhcp)
+
 [ISC dhcpd](https://ipxe.org/howto/dhcpd)
+
 or
 ```
 Boot iPXE
