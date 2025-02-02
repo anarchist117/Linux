@@ -3,6 +3,8 @@
 # Installing a new Hard Drive
 ```bash
 fdisk -l
+# or
+lsblk
 ```
 ### 1. Create Partition
 ```bash
