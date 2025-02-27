@@ -2,9 +2,9 @@
 
 # Installing a new Hard Drive
 ```bash
-fdisk -l
-# or
 lsblk
+# or
+fdisk -l
 ```
 ### 1. Create Partition
 ```bash
@@ -26,9 +26,14 @@ mkfs.ext4 /dev/sdb1
 ```bash
 mkdir /mnt/data
 ```
+```
+blkid /dev/sdb1
+
+/dev/sdb1: LABEL_FATBOOT="bootfs" LABEL="bootfs" UUID="4EF5-6F55" BLOCK_SIZE="512" TYPE="vfat" PARTUUID="89410092-01"
+```
 ```bash
 nano /etc/fstab
-/dev/sdb1  /mnt/data  ext4  defaults  0 2
+UUID=4EF5-6F55  /mnt/data  ext4  defaults  0 2
 ```
 
 
