@@ -1,6 +1,5 @@
-# Update bootloader
+# Update
 ```
-rpi-eeprom-update
 rpi-eeprom-update -a
 reboot
 ```
