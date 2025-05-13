@@ -36,3 +36,8 @@ service ssh restart
 ```
 ssh -L8001:localhost:8001 user@remote-host
 ```
+
+# SSH Jumphost
+```
+ssh -J username@jumphost username@vm
+```
