@@ -2,7 +2,7 @@
 
 # Installing a new Hard Drive
 ```bash
-lsblk
+lsblk -f
 # or
 fdisk -l
 ```
@@ -16,12 +16,18 @@ default   # First sector
 default   # Last sector
 w         # Write table to disk and exit
 ```
+```
+parted -s /dev/vdb mklabel gpt
+parted -s /dev/vdb mkpart primary ext4 1MiB 100%
+```
 
 ### 2. Format Partition
 ```bash
 mkfs.ext4 /dev/sdb1
 ```
-
+```
+mkfs.ext4 -L backup /dev/vdb1
+```
 ### 3. Mount Point
 ```bash
 mkdir /mnt/data
@@ -33,7 +39,8 @@ blkid /dev/sdb1
 ```
 ```bash
 nano /etc/fstab
-UUID=4EF5-6F55  /mnt/data  ext4  defaults  0 2
+UUID=4EF5-6F55  /mnt/data  ext4  defaults,nofail 0 2
+LABEL=backup /mnt/backup ext4 defaults,nofail 0 2
 ```
 
 
