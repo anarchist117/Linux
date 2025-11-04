@@ -71,3 +71,6 @@ gdisk /dev/sdb
 w         # Write data
 y         # Do you want to proceed?
 ```
+```
+lsblk -o NAME,PTTYPE,MOUNTPOINT,SIZE
+```
