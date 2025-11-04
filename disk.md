@@ -45,7 +45,10 @@ LABEL=cloudimg-rootfs /           ext4 discard,commit=30,errors=remount-ro 0 1
 LABEL=UEFI            /boot/efi   vfat umask=0077                          0 1
 LABEL=backup          /mnt/backup ext4 defaults,nofail                     0 2
 ```
-
+```
+systemctl daemon-reload
+mount -a
+```
 
 
 # Extend Partition
