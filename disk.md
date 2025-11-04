@@ -17,8 +17,8 @@ default   # Last sector
 w         # Write table to disk and exit
 ```
 ```
-parted -s /dev/vdb mklabel gpt
-parted -s /dev/vdb mkpart primary ext4 1MiB 100%
+parted -s /dev/sdb mklabel gpt
+parted -s /dev/sdb mkpart primary ext4 1MiB 100%
 ```
 
 ### 2. Format Partition
@@ -26,7 +26,7 @@ parted -s /dev/vdb mkpart primary ext4 1MiB 100%
 mkfs.ext4 /dev/sdb1
 ```
 ```
-mkfs.ext4 -L backup /dev/vdb1
+mkfs.ext4 -L backup /dev/sdb1
 ```
 ### 3. Mount Point
 ```bash
