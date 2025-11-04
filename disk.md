@@ -22,28 +22,17 @@ parted -s /dev/sdb mkpart primary ext4 1MiB 100%
 ```
 
 ### 2. Format Partition
-```bash
-mkfs.ext4 /dev/sdb1
 ```
-```
-mkfs.ext4 -L backup /dev/sdb1
+mkfs.ext4 -L data /dev/sdb1
 ```
 ### 3. Mount Point
 ```bash
 mkdir /mnt/data
 ```
-```
-blkid /dev/sdb1
-
-/dev/sdb1: LABEL_FATBOOT="bootfs" LABEL="bootfs" UUID="4EF5-6F55" BLOCK_SIZE="512" TYPE="vfat" PARTUUID="89410092-01"
-```
 ```bash
 nano /etc/fstab
-UUID=4EF5-6F55  /mnt/data  ext4  defaults,nofail 0 2
 
-LABEL=cloudimg-rootfs /           ext4 discard,commit=30,errors=remount-ro 0 1
-LABEL=UEFI            /boot/efi   vfat umask=0077                          0 1
-LABEL=backup          /mnt/backup ext4 defaults,nofail                     0 2
+LABEL=data            /mnt/data ext4 defaults,nofail                     0 2
 ```
 ```
 systemctl daemon-reload
