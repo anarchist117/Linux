@@ -28,11 +28,7 @@ mkfs.ext4 -L data /dev/sdb1
 ### 3. Mount Point
 ```bash
 mkdir /mnt/data
-```
-```bash
-echo "LABEL=data            /mnt/data ext4 defaults,nofail                     0 2" | tee -a /etc/fstab
-```
-```
+echo "LABEL=data            /mnt/data       ext4    defaults,nofail   0       2" | tee -a /etc/fstab
 systemctl daemon-reload
 mount -a
 ```
