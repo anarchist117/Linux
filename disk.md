@@ -30,9 +30,7 @@ mkfs.ext4 -L data /dev/sdb1
 mkdir /mnt/data
 ```
 ```bash
-nano /etc/fstab
-
-LABEL=data            /mnt/data ext4 defaults,nofail                     0 2
+echo "LABEL=data            /mnt/data ext4 defaults,nofail                     0 2" | tee -a /etc/fstab
 ```
 ```
 systemctl daemon-reload
