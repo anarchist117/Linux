@@ -1,27 +1,27 @@
 network:
-    bonds:
-        bond0:
-            interfaces:
-            - eno1
-            - eno2
-            parameters:
-                mode: active-backup
-    ethernets:
-        eno1: {}
-        eno2: {}
-    version: 2
-    vlans:
-        bond0.123:
-            addresses:
-            - 10.11.12.123/24
-            id: 10
-            link: bond0
-            nameservers:
-                addresses:
-                - 10.11.12.1
-                - 10.11.12.2
-                search:
-                - domain.com
-            routes:
-            -   to: default
-                via: 10.11.12.254
+  version: 2
+  ethernets:
+    eno1: {}
+    eno2: {}
+  bonds:
+    bond0:
+      interfaces:
+      - eno1
+      - eno2
+      parameters:
+        mode: "active-backup"
+  vlans:
+    bond0.123:
+      addresses:
+      - "10.11.12.123/24"
+      nameservers:
+        addresses:
+        - 10.11.12.1
+        - 10.11.12.2
+        search:
+        - domain.com
+      routes:
+      - to: "default"
+        via: "10.11.12.254"
+      id: 10
+      link: "bond0"
