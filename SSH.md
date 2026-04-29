@@ -23,10 +23,9 @@ ssh-keygen -lf .ssh/id_rsa
 
 # SSH Config
 ```
-# /etc/ssh/sshd_config
+# /etc/ssh/sshd_config.d/50-cloud-init.conf
 
 PasswordAuthentication no
-PubkeyAuthentication yes
 ```
 ```
 service ssh restart
