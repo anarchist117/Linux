@@ -3,6 +3,16 @@
 ssh-keygen -t ed25519
 ```
 
+# Copy Public Key
+```
+# Linux
+ssh-copy-id root@server
+```
+```
+# Windows
+type $env:USERPROFILE\.ssh\id_ed25519.pub | ssh user@vm "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+```
+
 # SSH Config
 ```
 nano /etc/ssh/sshd_config.d/00-security.conf
@@ -28,7 +38,7 @@ service ssh restart
 
 # SSH Tunnel
 ```
-ssh -L8001:localhost:8001 user@vm
+ssh -L 80:localhost:3000 user@vm
 ```
 
 # SSH Jumphost
